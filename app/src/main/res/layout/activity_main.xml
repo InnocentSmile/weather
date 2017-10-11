@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/scaleAnimBackLL"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:background="#545654">
+        <ImageView
+            android:id="@+id/im_bg_Wtype"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/blur_bg0_fine_day"
+            />
+    </FrameLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="39dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/Mcity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:text="N/A"
+            android:textColor="#f9faf9"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="N/A"
+        android:textColor="#f9faf9"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="100sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="N/A"
+                android:textColor="#ffffff"/>
+
+
+            <ImageView
+                android:id="@+id/imageView_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wna"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:text="绝对是发货单上课了丰厚的设计费"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:id="@+id/Text_Lunar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="N/A"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+    <com.example.mrpeng.weather.MyListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#64c0cbd6"
+        android:dividerHeight="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView5"
+        android:listSelector="#32898c89"
+        android:entries="@array/name"
+         android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:drawableRight="@drawable/root"
+            android:text="数据来源于网络"
+            android:gravity="center"
+            android:layout_gravity="right|bottom"
+            android:textStyle="bold"/>
+     </LinearLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/see_city_topic_icon"
+            android:id="@+id/imageView2"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/location_city_name" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="location_refresh"
+            android:background="@drawable/button_bg"
+            android:textSize="20sp"
+            android:textColor="#f9faf9"
+            android:textStyle="bold"
+            style="?android:borderlessButtonStyle"
+            android:text="pzl"
+            android:id="@+id/location_city_name" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/refresh"
+            android:background="@drawable/button_bg"
+            android:onClick="refresh"
+            android:id="@+id/imageView_refresh"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/imageView_add_city" />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/add_normal"
+            android:background="@drawable/button_bg"
+            android:onClick="addcityClick"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageView_add_city" />
+    </RelativeLayout>
+
+</RelativeLayout>
